@@ -1,0 +1,64 @@
+<html>
+
+<head>
+    <meta http-equiv="origin-trial" content="Avh5Ny0XEFCyQ7+oNieXskUrqY8edUzL5/XrwKlGjARQHW4TFRK+jVd5HnDIpY20n5OLHfgU4ku7x48N3uhG/A0AAABxeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjk1MTY3OTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZX0=">
+</head>
+
+<body>
+    <script>
+        var ig_list = {
+            "interestGroups": [{
+                "action": 0,
+                "expirationTimeInSeconds": 4320000,
+                "interestGroupAttributes": {
+                    "owner": "https://td.doubleclick.net",
+                    "name": "1j8201649596",
+                    "biddingLogicUrl": "https://td.doubleclick.net/td/bjs",
+                    "dailyUpdateUrl": "https://td.doubleclick.net/td/update?ig_name=1j8201649596\u0026tag_eid=44805651",
+                    "trustedBiddingSignalsUrl": "https://td.doubleclick.net/td/bts",
+                    "trustedBiddingSignalsKeys": ["1sucJlkg!2sZfrlqQ!3sAAptDV5dLS6Z"],
+                    "userBiddingSignals": [null, null, 1706621609657151],
+                    "ads": [{
+                        "renderUrl": "https://tdsf.doubleclick.net/td/adfetch/gda?adg_id=157221465568\u0026cr_id=666492302373\u0026cv_id=10\u0026format=${AD_WIDTH}x${AD_HEIGHT}\u0026rds=${RENDER_DATA}",
+                        "metadata": ["157221465568", "666492302373", "10", "20390543225"],
+                        "adRenderId": "2Hmk8wtt_ys"
+                    }, {
+                        "renderUrl": "https://tdsf.doubleclick.net/td/adfetch/gda?adg_id=150193097410\u0026cr_id=678426681596\u0026cv_id=3\u0026format=${AD_WIDTH}x${AD_HEIGHT}\u0026rds=${RENDER_DATA}",
+                        "metadata": ["150193097410", "678426681596", "3", "20711089663"],
+                        "adRenderId": "CZXm8PQLtpU"
+                    }, {
+                        "renderUrl": "https://tdsf.doubleclick.net/td/adfetch/gda?adg_id=155235803220\u0026cr_id=676511851561\u0026cv_id=2\u0026format=${AD_WIDTH}x${AD_HEIGHT}\u0026rds=${RENDER_DATA}",
+                        "metadata": ["155235803220", "676511851561", "2", "20636429255"],
+                        "adRenderId": "pxt_lq0K6vA"
+                    }, {
+                        "renderUrl": "https://tdsf.doubleclick.net/td/adfetch/gda?adg_id=155235803220\u0026cr_id=677634058248\u0026cv_id=3\u0026format=${AD_WIDTH}x${AD_HEIGHT}\u0026rds=${RENDER_DATA}",
+                        "metadata": ["155235803220", "677634058248", "3", "20636429255"],
+                        "adRenderId": "aPOPkgTZ6qU"
+                    }, {
+                        "renderUrl": "https://tdsf.doubleclick.net/td/adfetch/gda?adg_id=155235803220\u0026cr_id=678358126702\u0026cv_id=2\u0026format=${AD_WIDTH}x${AD_HEIGHT}\u0026rds=${RENDER_DATA}",
+                        "metadata": ["155235803220", "678358126702", "2", "20636429255"],
+                        "adRenderId": "ker0_oX7diI"
+                    }],
+                    "executionMode": "group-by-origin",
+                    "biddingWasmHelperUrl": "https://td.doubleclick.net/td/buyer.wasm",
+                    "enableBiddingSignalsPrioritization": true
+                }
+            }]
+        };
+    </script>
+    <script>
+        for (let i of ig_list.interestGroups) {
+            try {
+                if (i.action == 0) {
+                    navigator.joinAdInterestGroup(i.interestGroupAttributes, i.expirationTimeInSeconds);
+                } else if (i.action == 1) {
+                    navigator.leaveAdInterestGroup(i.interestGroupAttributes);
+                }
+            } catch (e) {
+                navigator.sendBeacon(`https://pagead2.googlesyndication.com/pagead/gen_204/?id=turtlex_join_ig&tx_jig=${encodeURIComponent(JSON.stringify(i))}&tx_jem=${e.message}&tx_jen=${e.name}`);
+            }
+        }
+    </script>
+</body>
+
+</html>
